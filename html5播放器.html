@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		button{}
+	</style>
+	<script>
+	window.onload=function () {
+		 var oV=document.getElementById('play');
+		 var oPlay=document.getElementById('start');
+		 var oPause=document.getElementById('pause');
+		 var oStop=document.getElementById('stop');
+		 for(name in oV){
+
+		 console.log(name)
+		 }
+			oPlay.onclick=function(){
+				oV.play();
+			};
+			oPause.onclick=function(){
+				oV.pause();
+				alert(oV.currentTime)
+			};
+			oStop.onclick=function(){
+				oV.pause();
+				oV.currentTime=0;
+			};
+			oV.ontimeupdate=function () {
+				var nowTime=parseInt(oV.currentTime);
+				console.log(nowTime)
+				 if(nowTime==6){
+				 	oV.pause();
+				 	alert('题目');
+				 }
+			}
+	}
+	</script>
+</head>
+<body>
+	<video src="loop.webm" id="play" controls="controls"></video>
+	<button id="start">播放</button>
+	<button id="pause">暂停</button>
+	<button id="stop">停止</button>
+</body>
+</html>

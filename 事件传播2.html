@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script>
+	var myAngular=angular.module('TestApp',[]);
+		myAngular.controller('hello',['$scope',function($scope){
+			$scope.greeting={text:'Hello'};
+		}]);
+		function hello($scope){
+			$scope.greeting={text:'Hello'};	
+		}
+	</script>
+</head>
+<body>
+	<p ng-controller="hello">
+		{{greeting.text}},angular
+	</p>
+</body>
+</html>

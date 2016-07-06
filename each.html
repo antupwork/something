@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.7.2.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			var ali=$('ul li');
+			$.each(ali, function(index, val) { //index 表示循环的每一个，val表示ali每一个元素
+				alert($(val).text());
+					
+				 /* iterate through array or object */
+			});
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+	</script>
+</body>
+</html>

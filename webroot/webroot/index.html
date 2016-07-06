@@ -1,0 +1,153 @@
+<!DOCTYPE html><!--
+                                 -oydhdysoo/:..                                  
+                             :odddhdds+ooshdhys+so+/`                           
+                            /dhhysoo+++ooooo++oyhdmmm/                          
+                           /hhyysooo+osooooooooossshhd/                         
+                          `ydyyhssssos++::///++++/+osyh+                        
+                         .oyysssssoo+++:__...__:+ooossssy/`                     
+                        -hyo+/////:::____-.....__+o+oosossy+`                   
+                        :yo/:::::::________-...__/ooo+o++++os.                  
+                        `s::::::-:::__::::____.-/+ossss+++/+++.                 
+                        :/:::::-::::::::____....::+oossso+++/+/                 
+                        +/:::__::::://:::-.....__-:+ooooosoo/o.                 
+                      -+o+///://+//++/////:..-.__-++oossoooooy`                 
+                      -syyss+//++++/++///+/:..__:/+++syosossy.                  
+                       syhhdhh+/.__osshhyo//::__::++ossoososs:                  
+                      `o++ooyy/..-++++so+++/:____-:++o+++::oo`                  
+                      `so+/+o:..-:////:__-:____...-:/:-:-.-/o`                  
+                       :s++o:..-..:://:____-..__-://:-:::-.:+                   
+                        .oo+-.____:::/::::::__/+syyo:::__-/+`                   
+                         -y+::o+//:::::///::+sysyyy/:__-/oo.                    
+                         `+ssysoso//:://///+syyosyhs/:/ys+`                     
+                         `ohyyyyyssyss/++oosssssyyhds/ohs.                      
+                         /hhyo++oossshyoooossoyhyhy+::+ys/`                     
+                         `-+hso++++/:oyysosossyhho:__//osmy`                    
+                            :hhsssss/+osyyyyhhys/__.-+//ohh__                   
+                             sdddhhyyyyyyhdho//:__:/osyyyyo:+                   
+                           `omdmdhyyyyyhys+::::/+yhhhdhyyhysho`                 
+                           :NNmmdhhyssso////++yhhyyyyyhhhyydhdy`                
+                          .smNNmmmNd///:ymmdhhyyysssyyyhhhdhymdo-               
+                       ./ymNNNNNNNNN+::/mNhyyhhhhyyyyyhdhyyhmdhhho-`            
+                    .:odmmNNNMNMNmNNdoshmmdddddddddddddhhydhdmddddho:`          
+                  `+dmmmNNNNNNNNmmNNmdmmmdmmddddddmmdhdmdsyyydhdysyhys/.`       
+                 :ymmNNNMMMNNNNmmmdh+dmNNmmmmddhmhdddhNdyhysydyydyooyhhyo+:`    
+               `+mNNNNNNMMMNMNmd+++smNNNNmmNNmhdNddddmdddhdydmysyhhhyydyyhhs/`  
+`              smmNNNNNMNMNNNmy//:omNNmmmmmNNmhmNmdmddmddddhmmhssysyhdmhdmdhhy/`
+y:            -dmmNNNNMMMNNmh+:::omNmddmmNNNmhdNmmdhdmddhddddmNhyyysyhyhdddmdhhs
+my-           -dmNNNNNMMMNh/:-:-+mmddmmmNmmmddmmdmddhdddhydhmmmdyyyyohdhyyyhdmdh
+mdo-          .NNNNNNNMNNm::-.-/hmdmmmmmNmddmmmmdmmhddydhhdmmmmdhysss+mddhhyyhhd
+ddds/`        :NNNNNNMNNms____:omdmmmmmNmdhmmmddmmmdddddhdmdddddhmyysosmdhyhdhhh
+dyhds+.       oNNNmNNNNdo-:__-:hmmmmmmmmmdmmmdmdmNddddddmmhdmhdmhddyys/mhsyydmhh
+ddhhds+-     /mNNmNNNNm+-:__:-/mmmmmmdmmmmmmmmmmNmdmddmddhdmdymdhddhyy/hmyshyyhd
+yhddyhh+/   `dmNmmNNmNs/::-::-dmmmNmdmmNmmdmNmmmNmmmdmmhdmhhmymhyddhyy+ymmyhhhhh
+syyyhshd+/` smNNNmmddhooso/:.ommmNNmddNmmmmmmmmmmNmmmhdmmhddhddmddhhyssodmmdhyyy
+dsssyyyhdoo+mmNmms+/////+ooo+dmdmNmddmNmmmmmdmmmNmmddmmddmdhddmNddhhyoy+dhydNdhs
+ddyssyyyhdssdhhys+///+/+/:://sddmmmdmmmmmmmmmmmmmmmmmddmmmddhmmNddyysssodmyyhdmd
+NNmmdhssh+ss/+//:::/:-/os+////+oymddmmmmdmmmmdmmmmmmmmmmmmhdmmmmhhyysssodmyyhyhd
+NNmmdmNhssyyyyyyso+++/-:syy+/:::/+sdmdmddNmmdmmmmmmmmmmmdymmmNmyyyysssyodmhyyyhh
+hssyyyhddhyddyysyyysooosyyyo///::::/+shdmmddmmmmmmmmmmmddmmmNmdssyssssyommmhhhhh
+oooosoosssyyyyss++osoo++++++/+//:::____/oyddmmddmdmmmddmmmmmdhsyysssyyhydmmmhhyy
+oo++so++//+/ssooo/:://+sssss++/::/:-:__::::ohdddddmdddmmdmmdyshysssyyhdhddhhmhhs
++/+//+/+//:::____::://+ss/join us - http://www.vangogh-creative.it yhddymdhyhsso
+
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clock</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		body{ background: #000; }
+		div { width: 1200px; height: 200px; margin: 100px auto; }
+		div ul { width: 100%; height: 100%;}
+		div ul li{width:100px;height: 100px; transform-style:preserve-3d;transform:perspective(800px) rotateY(20deg) rotateX(0deg); float: left ; margin: 0 20px; position: relative;}
+		div ul li span{ width:100%;height: 100%;position: absolute;left: 0; top: 0; font-size: 30px; line-height: 100px; text-align: center; color: #fff; opacity: 0.6; border:2px dashed #fff; box-shadow: 0 0 20px #fff;}
+		div span.front{transform:translateZ(50px);font-size: 40px; text-shadow: 0 0 10px #fff; color: #FFF463;}
+		div span.back{transform:translateZ(-50px);}
+		div span.top{transform: translateY(-50px) rotateX(-90deg) scale(1,-1);font-size: 40px; text-shadow: 0 0 10px #FFF463;color: #FFF463; }
+		div span.under{transform: translateY(50px) rotateX(90deg) ;}
+	</style>
+	<script>
+		function toDou(n){
+			return n<10?'0'+n:''+n;	
+		}
+		document.addEventListener('DOMContentLoaded',function(){
+			var oUl=document.getElementById('clock');
+			var aLi=oUl.children;
+			function timer(){
+				var oDate=new Date();
+				var H=toDou(oDate.getHours());
+				var M=toDou(oDate.getMinutes());
+				var S=toDou(oDate.getSeconds());
+				var str=H+M+S;
+				var basket=[];
+					for(var i=0;i<aLi.length;i++){
+						basket.push(aLi[i].children[0].innerHTML);
+					}
+				for(var i=0;i<aLi.length;i++){
+					var T=parseInt(str.charAt(i));
+						aLi[i].style.transition='1s all ease';
+						if(basket[i]!=T){
+							aLi[i].style.WebkitTransform='perspective(800px) rotateY(20deg) rotateX('+-90+'deg)';
+							aLi[i].children[0].innerHTML=T;
+							aLi[i].children[2].innerHTML=T;
+							aLi[i].children[1].innerHTML=Math.abs(T-1);
+							aLi[i].children[3].innerHTML=Math.abs(T-2);
+							aLi[i].addEventListener('transitionend',function(){
+								for(var i=0;i<aLi.length;i++){
+								aLi[i].style.WebkitTransition='none';
+								aLi[i].style.WebkitTransform='perspective(800px) rotateY(20deg) rotateX('+0+'deg)';
+								}
+							},false);	
+						}
+				}
+			}
+
+			setInterval(timer,1000);
+		},false);
+	</script>
+</head>
+<body>
+	<div>
+		<ul class="clock" id="clock">
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+			<li>
+				<span class="front"></span>
+				<span class="back"></span>
+				<span class="top"></span>
+				<span class="under"></span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

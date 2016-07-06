@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+/*static关键字用来定义类的静态方法。静态方法是指那些不需要对类进行实例化，使用类名就可以直接访问的方法。静态方法经常用来作为【工具函数】。
+
+const:
+在Firefox和Chrome更早期的版本，Safari 5.1.7和Opera 12.00，如果使用【const】定义一个变量，这个变量的值仍然可以修改。IE6-10 不支持 const，但是IE11支持。
+这个声明创建了一个常量，可以在全局作用域或者函数内声明常量，常量需要被初始化。这就是说，在定义常量的同时必须初始化(这是【有意义的】，鉴于变量的值在初始化后就【不能改变】)。
+*/
+		class Point{
+			constructor (x,y,z){
+				this.x = x;
+				this.y = y;
+				this.z = z;
+			}
+			static calc(a,b,c){
+				console.log(a,b,c);
+				const add=a.x+b.y+c.z;
+				const ride=a.x*b.y*c.z;
+				return '相加结果是'+add+'  相乘结果是'+ride;
+			}
+		}
+
+		const run1=new Point(1,2,3);
+		const run2=new Point(2,3,4);
+		const run3=new Point(3,4,5);
+		console.log(Point.calc(run1,run2,run3));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

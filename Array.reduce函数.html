@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// <=ie8不支持此方法
+		// 函数解释 [x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4);
+		var arr=[2,1,2,3,4,5];
+		var result=arr.reduce(function (x,y) {			//函数必须有两个参数，在函数内对其进行运算
+				return x*y;
+		});
+		console.log(result);
+		var arr2=[];
+			for(var i=0; i<100;i++){
+				arr2.push(i);
+			}
+		//求和
+		var add=arr2.reduce(function (x,y) {
+			 return x+y;
+		});
+		console.log(add);
+		//查找最小数字
+		var arr3=[12,2,45,1,-8,0,99,10,100];
+		var sortNum=[];
+		var sort=arr3.reduce(function (x,y) {
+			if(x>y){
+				var mid=x;
+				x=y;
+				y=mid;
+			}
+			return x; 
+		});
+		console.log(sort,sortNum);
+		//查到指定字符编码;
+		(function () {
+			var codeNum=Array.prototype.map;
+			var codeNow=codeNum.call('贾泽强',function (x) {
+					 return x.charCodeAt(0);
+				});
+			console.log(codeNow);
+		})()
+		// 查找指定字符编码的结果
+		function findCodeout(out) {
+			var codeNum=Array.prototype.map;
+			var codeNow=codeNum.call(out,function (x) {
+					 return String.fromCharCode(out);
+				});
+		 } 
+		 console.log(findCodeout('1'))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

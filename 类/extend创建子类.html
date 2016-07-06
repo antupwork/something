@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// alert(null === undefined);	//false
+		// alert(null == undefined);	//true
+		// alert(false == []);		//true
+		alert(true == [])
+		class NewClass{
+			constructor (x,y){
+				this.x = x;
+
+				this.y = y; 
+			}
+
+			sum(){
+
+				return this.x*this.y;
+			}
+		}
+
+		class Son extends NewClass {
+
+			sum(){
+				return this.x*this.y;
+			}
+		}
+
+		var run = new NewClass(1,2);
+		var run2 = new Son(2,3);
+		console.log(run.sum(),run2.sum())
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+			0..0..0
+			0..0..1
+			0..0..2
+			0..1..0
+			0..1..1
+			0..1..2
+			0..2..0
+			0..2..1
+			0..2..2
+			1..0..0
+			...
+		*/
+		for(var i=0;i<3;i++){//alert('www')
+			for(var j=0;j<3;j++){
+				for(var k=0;k<3;k++){
+					console.log(i+'..'+j+'..'+k)
+				}
+				//alert(j)
+			}
+		}
+		window.onload=function () {
+			 var oL=document.querySelector('li');
+			 oL.onclick=function () {
+			 	 window.open("http://www.baidu.com","_self")
+			 }
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li ><a href=>111</a></li>
+	</ul>
+</body>
+</html>

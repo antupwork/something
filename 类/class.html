@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	//constructor 方法是一个特殊的类方法，它既不是静态方法也不是实例方法，它仅在实例化一个类的时候被调用。[一个类只能拥有一个名为 constructor 的方法]，否则会抛出 SyntaxError 异常。
+		class box{
+			constructor(x,y){
+				this.x=x;
+				this.y=y;
+			}
+
+			get sum(){
+				return this.add();
+			}
+
+			add(){
+				return this.x+this.y;
+			}
+		}
+		let run=new box(2,3);
+		console.log(new box(2,3));
+		console.log(run.sum());		//get怎么调用？
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="first">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script>
+	var start=angular.module("first",[]);
+		start.controller('now',['$scope',function($scope){
+			$scope.name={test:'now'};
+		}]);
+	</script>
+</head>
+<body>
+	<div ng-controller="now">
+		<input type="text">
+		<p>qq {{name.test}}</p>
+	</div>
+</body>
+</html>

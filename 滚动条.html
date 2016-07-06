@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	</style>
+	<script src="jquery-1.7.2.js"></script>
+	<script>
+		var number=1000;
+		alert( number /= 10000);
+x=0;
+$(document).ready(function(){
+	$("div").scroll(function  (argument) {
+		console.log($("div").scrollTop()) 
+	});
+});
+	</script>
+</head>
+<body>
+<p>请试着滚动 DIV 中的文本：</p>
+<div style="width:200px;height:100px;overflow-y:scroll;overflow-x:hidden;list-style: none  ">text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. 
+<br /><br />
+text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text. text.</div>
+<p>滚动了 <span>0</span> 次。</p>
+</body>
+</html>

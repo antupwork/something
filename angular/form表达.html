@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="UserInfoModule">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<script src="angular.js"></script>
+	<script src="module.js"></script>
+</head>
+<body>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<div class="panel-title">双向数据bind</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal" role="form" ng-controller="userCtrl">
+						<div class="form-group">
+							<label  class="col-md-2 control-label">
+								邮箱：
+							</label>
+							<div class="col-md-10">
+								<input type="email" class="form-control" placeholder="推荐使用gmail" ng-model="userInfo.email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">
+								密码：
+							</label>
+							<div class="col-md-10">
+								<input type="password" class="form-control" placeholder="请输入数字字母下划线" ng-model="userInfo.password">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" ng-model="userInfo.autoLogin">自动登陆
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<button class="btn btn-default" ng-click="getFormData()">
+									获取form表单的值
+								</button>
+								<button class="btn btn-default" ng-click="setFormData()">
+									设置form表单的值
+								</button>
+								<button class="btn btn-default" ng-click="resetFormData()">
+									重置form表单的值
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

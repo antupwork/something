@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.7.2.js"></script>
+	<style>
+		body{height: 20000px;}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮" class="btn">
+	<div id="menu" style="width: 100px; height: 100px;background: #889999;"></div>
+	<div id="open" style="width: 100px; height: 100px;background: #333333;"></div>
+	<script>
+		$(document).on('click','.btn',function () {
+			 $(this).css('background', 'blue');
+		}).on('click', function(event) {
+			if($(event.target).closest('.btn').length!=1){
+				$('.btn').css('background', 'red');
+ 				//$(document.body).css('overflow', 'hidden');
+ 				$(window).unbind(scroll)
+			}
+			event.preventDefault();
+			/* Act on the event */
+		});
+    $(function(){
+        $(document).bind("click",function(e){
+            //id为menu的是菜单，id为open的是打开菜单的按钮            
+            if($(e.target).closest(["#menu","#open"]).length == 0){
+            //点击id为menu之外且id不是不是open，则触发
+                alert(1)
+            }
+        })
+    })
+	</script>
+</body>
+</html>

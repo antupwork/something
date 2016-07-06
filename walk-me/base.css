@@ -1,0 +1,14 @@
+
+#canvas{ 
+		background:url(images/grey.jpg) no-repeat;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		position: relative;
+		}
+.bgpic{
+	width: 210px;
+	height: 174px;
+	background: url(images/img_load.gif) no-repeat;
+}
+

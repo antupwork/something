@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script>
+		var myApp=angular.module('test',[]);
+			myApp.controller('run',function($scope){
+				$scope.name=[1,22,3,4,5,6];
+			});
+	</script>
+</head>
+<body ng-controller="run">
+	<ul >
+		<li ng-repeat="item in name">{{item}}</li>
+	</ul>
+</body>
+</html>

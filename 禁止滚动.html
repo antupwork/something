@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.7.2.js"></script>
+	<style>
+#wrapper{
+  background: #202020;
+  color: red;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  box-shadow: 0 0 5px #222;
+  padding: 5px;
+}
+
+#result{
+  padding: 10px;
+  font-family: Arial;
+}
+
+body{
+  font-family: Arial;
+  font-size:12px;
+  height: 2000px;
+}
+
+	</style>
+</head>
+<body>
+
+<div id="wrapper">
+<button id="bind">bind</button>
+<button id="unbind">unbind</button>
+<div id="result">0</div>
+</div>	
+	<script>
+var scrollHandler = function(){
+  myScroll = $(window).scrollTop();
+  $('#result').html(myScroll);
+};
+
+$('#bind').click(function(){alert(1)
+  $(window).scroll(scrollHandler);
+}).click(); 
+
+$('#unbind').click(function(){
+  $(window).off("scroll", scrollHandler);
+ 
+});
+  
+	</script>
+</body>
+</html>

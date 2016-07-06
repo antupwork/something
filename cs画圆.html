@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="conical/prefixfree.min.js"></script>	
+	<script src="conical/conic-gradient.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.pie{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background: yellowgreen;
+			background-image: linear-gradient(to right ,transparent 50%, #655 0);
+			margin: 100px auto;
+		}
+		.pie::before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			border-radius: 0 100% 100% 0 / 50%;
+			background-color: inherit;
+			transform-origin: left;
+			transform: rotate(15deg);
+		}
+		.conic{
+			width: 200px;
+			height: 200px;
+			background:conic-gradient(#f06,gold);
+		}
+		iframe{
+			width: 300px;
+			height: 300px;
+		}
+</style>
+</head>
+<body>
+	<div class="pie"></div>
+	<div class="conic"></div>
+	<iframe src="conical/svg-menu.svg" frameborder="0"></iframe>
+	<script>
+		var oImg=document.getElementById('menu');
+		console.log(oImg);
+		oImg.onclick=function  (argument) {
+			 alert(1)
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	class Polygon {
+	  constructor(height, width) {
+	    this.name = 'Polygon';
+	    this.height = height;
+	    this.width = width;
+	  }
+	}
+
+	class Square extends Polygon {
+	  constructor(length) {
+	    super(length, length);
+	    this.name = 'Square';
+	  }
+	}
+	// console.log(Polygon+'\n'+Square)
+	// var test=new Square(800,200);
+	// console.log(test);
+
+
+	class Polygon2 { 
+		constructor(height, width) { 
+			this.height = height; 
+			this.width = width;
+		} 
+	}
+	class Square2 extends Polygon2 { 	//class函数内不能再每个发放后加";"
+		constructor(sideLength) { 
+			super(sideLength, sideLength);	//super函数一定要在this可以使用之前调用。
+		 } 
+		 get area() { 
+		 	return this.height * this.width; 
+		 } 
+		 set sideLength(newLength) { 
+		 	this.height = newLength; 
+		 	this.width = newLength; 
+		 }
+	}
+	var test2=new Square2(200,800);
+	console.log(test2.constructor instanceof(Object))		//不能用test2.area()使用它的方法！
+	console.log(test2.constructor.super)		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="test">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="EventController">
+		Root Space
+		<tt>MyEvent</tt>count:{{count}}
+		<ul>
+			<li ng-repeat="i in [1]" ng-controller="EventController">
+				<button ng-click="$emit('MyEvent')">
+					$emit('MyEvent')
+				</button>
+				<button ng-click="$broadcast('MyEvent')">
+					$broadcast('MyEvent')
+				</button>
+				<br/>
+				Middle scope
+				<tt>MyEvent</tt>count:{{count}}
+				<ul>
+					<li ng-repeat="item in [1,2]" ng-controller="EventController">
+						leaf scope
+						<tt>MyEvent</tt>count:{{count}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a href="mailto:519244247@qq.com">111br	<br/></a>
+	<script src="angular.js"></script>
+	<script>
+	var myAn=angular.module('test',[]);
+		myAn.controller('EventController',['$scope',function($scope){
+			$scope.count=0;
+
+			$scope.$on('MyEvent',function(){
+				$scope.count++;
+			});
+
+		}]);
+	</script>
+</body>
+</html>

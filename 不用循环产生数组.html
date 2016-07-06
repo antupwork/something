@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	var arr=[];
+	var i=-1;
+	timer=setInterval(function () {
+		i++;
+		if(i==99){
+			clearInterval(timer)
+		}
+		arr.push(i);
+	})
+	console.log(arr);
+	// arr.map(function(index, elem) {
+	// 	if(elem<100){
+	// 		elem++;
+	// 		arr[elem]=elem;
+	// 	}
+	// })
+	//alert(arr)
+	//console.log(Array.prototype)
+	// console.log(arr.length)
+	// console.log(Array.apply(null, Array(100)).map((_, k) => k));
+	//方法1
+	console.log(' '.repeat(100).split('').map(Object.call, Number));
+	//方法2===>递归
+		function reduce(prev, curr) {
+		if (curr >= 100) {
+		return prev
+		}
+		prev.push(curr)
+		return reduce(prev, curr + 1)
+		}
+
+		var arr = reduce([], 0)
+	//方法3==goto
+
+		function VM() {
+			this.stack = [];
+			this.cs = [];
+			this.pc = 0;
+			this.ax = undefined;
+			this.bx = undefined;
+		};
+		VM.prototype.run = function(codes) {
+			this.cs = codes;
+			this.pc = 0;
+			return this.interpret();
+		};
+		VM.prototype.interpret = function() {
+			var vm = this;
+			var instruction = vm.cs[vm.pc];
+			var op = instruction[0];
+			var ops = instruction.slice(1);
+
+			switch (op) {
+			case 'jl':
+			  if (vm.ax < vm.bx) {
+			    vm.pc = ops[0];
+			    return vm.interpret();
+			  }
+			case 'inc':
+			  vm.ax++;
+			  break;
+			case 'ld':
+			  vm[ops[0]] = ops[1];
+			  break;
+			case 'push':
+			  vm.stack.push(vm[ops[0]]);
+			  break;
+			case 'pop':
+			  vm[ops[0]] = vm.stack.pop();
+			  break;
+			case 'arr_push':
+			  vm.bx.push(vm.ax);
+			  break;
+			case 'ret':
+			  return vm.ax;
+			  break;
+			default:
+			  throw 'wtf??';
+			}
+			vm.pc++
+			return vm.interpret();
+		}
+
+		function make_a_100_len_array_without_fucking_loop() {
+			var codes = [
+				['ld', 'ax', 0],  // 0
+				['ld', 'bx', []], // 1
+				['push', 'bx'],   // 2
+				['push', 'ax'],   // 3
+				['pop', 'ax'],    // 4
+				['pop', 'bx'],    // 5
+				['arr_push'],     // 6
+				['inc'],          // 7
+				['push', 'bx'],   // 8
+				['push', 'ax'],   // 9
+				['ld', 'bx', 100],// 10
+				['jl', 4],        // 11
+				['pop', 'bx'],    // 12
+				['pop', 'ax'],    // 13
+				['ret']
+			];
+			var vm = new VM();
+			return vm.run(codes);
+		}
+
+		var arr2 = make_a_100_len_array_without_fucking_loop();
+		console.log(arr2)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

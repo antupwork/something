@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script>
+		var ngNow=angular.module('test',[]);
+			ngNow.controller('ngtoggle',['$scope',function ($scope) {
+				 $scope.menuBar={show:false};
+				 $scope.changeState=function () {
+				 	 $scope.menuBar.show=!$scope.menuBar.show;
+				 }
+			}]);
+	</script>
+</head>
+<body ng-controller="ngtoggle">
+	<button ng-click="changeState()">切换按钮</button>
+	<ul ng-show="menuBar.show">
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.book{
+	width: 1700px;
+	height: 700px;
+	position: relative;
+	margin: 50px auto;
+}
+.book_cover,.book_shaow{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	width: 800px;
+	height: 600px;
+}
+.book_shaow{
+	z-index: 10;
+}
+.book_shaow-left{
+	position: absolute;
+	width: 8px;
+	height: 600px;
+	top: 3px;
+	background: rgba(000,000,000,0.5);
+}
+.book_shaow-left{
+	left: -7px;
+	border-radius: 50px;
+}
